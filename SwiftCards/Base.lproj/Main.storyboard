@@ -17,23 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Decks found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3Y-u7-sn4">
-                                <rect key="frame" x="239" y="111" width="123" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mFA-0K-fza">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="DecksTableView"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sHX-yH-BuG"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="X03-GC-on5"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrQ-zP-xSJ">
                                 <rect key="frame" x="0.0" y="560" width="600" height="40"/>
                                 <constraints>
@@ -44,27 +27,42 @@
                                     <action selector="onTapNewDeckButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdB-p9-lBk"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="unm-yD-iBQ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="496"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="DecksTableView"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zgz-vB-13X"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yta-J3-6MM"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Decks found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3Y-u7-sn4">
+                                <rect key="frame" x="239" y="111" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mFA-0K-fza" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2ox-ee-l4n"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CrQ-zP-xSJ" secondAttribute="bottom" id="3Gl-Sq-i0B"/>
-                            <constraint firstAttribute="trailing" secondItem="mFA-0K-fza" secondAttribute="trailing" id="3jr-iu-B4C"/>
-                            <constraint firstItem="mFA-0K-fza" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pb8-Kt-ZXe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mFA-0K-fza" secondAttribute="bottom" constant="40" id="QRR-4b-v7Y"/>
+                            <constraint firstAttribute="trailing" secondItem="unm-yD-iBQ" secondAttribute="trailing" id="3xw-6O-P3v"/>
+                            <constraint firstItem="unm-yD-iBQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MOR-FO-NSc"/>
                             <constraint firstAttribute="trailing" secondItem="CrQ-zP-xSJ" secondAttribute="trailing" id="QeH-H8-A8I"/>
+                            <constraint firstItem="unm-yD-iBQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SND-su-twf"/>
                             <constraint firstItem="k3Y-u7-sn4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vy0-mV-TNN"/>
                             <constraint firstItem="k3Y-u7-sn4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="crw-EL-rET"/>
+                            <constraint firstItem="CrQ-zP-xSJ" firstAttribute="top" secondItem="unm-yD-iBQ" secondAttribute="bottom" id="gSo-QZ-2en"/>
                             <constraint firstItem="CrQ-zP-xSJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z2f-vr-aeK"/>
-                            <constraint firstItem="CrQ-zP-xSJ" firstAttribute="top" secondItem="mFA-0K-fza" secondAttribute="bottom" id="zZr-hB-Bkc"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="mFA-0K-fza"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Decks" id="I9B-20-pJq"/>
+                    <connections>
+                        <outlet property="decksTableView" destination="unm-yD-iBQ" id="qWB-Xg-4IF"/>
+                        <outlet property="emptyDeckLabel" destination="k3Y-u7-sn4" id="g8h-Yy-mfh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,6 +85,9 @@
                                 <accessibility key="accessibilityConfiguration" label="Deck Name TextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onDeckNameChanged:" destination="7by-ts-hcI" eventType="editingChanged" id="pyU-m5-SOy"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,6 +98,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Deck" id="tXF-FI-O0K"/>
+                    <connections>
+                        <outlet property="deckNameTextField" destination="PTH-TH-jQi" id="Vch-7T-W5M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Cs-ls-76b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

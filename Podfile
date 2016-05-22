@@ -1,13 +1,14 @@
 platform :ios, '8.0'
 use_frameworks!
 
-
 def test_pods
   pod 'Quick'
   pod 'Nimble'
+  pod 'RealmSwift'
 end
 
 target 'SwiftCards' do
+  pod 'RealmSwift'
 end
 
 target 'SwiftCardsTests' do

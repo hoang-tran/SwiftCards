@@ -6,40 +6,27 @@
 //  Copyright © 2016 Hoang Tran. All rights reserved.
 //
 
-import KIF
-import Quick
-import Nimble
-
-class DeckIndexTests: KIFTestCase {
+class DeckIndexTests: BaseUITests {
   
-  override func setUp() {
-    super.setUp()
-    cleanDatabase()
+  func test01_no_decks_found() {
+    should_see_label("No Decks found")
+    should_not_see_any_decks_listed()
   }
   
-  func testNoDecksFound() {
-    tester().waitForViewWithAccessibilityLabel("No Decks found")
-    tester().waitForAbsenceOfViewWithAccessibilityLabel("DecksTableView")
+  func test02_tap_cancel_on_deck_form() {
+    tap("New Deck")
+    deck_form_should_show_up()
+    tap("Cancel")
+    deck_form_should_disappear()
   }
   
-  func testPressAddButtonShouldOpenDeckForm() {
-    tester().tapViewWithAccessibilityLabel("New Deck")
-    expectToSeeDeckForm()
-  }
-  
-}
-
-extension DeckIndexTests {
-  
-  func cleanDatabase() {
-    
-  }
-  
-  func expectToSeeDeckForm() {
-    tester().waitForViewWithAccessibilityLabel("Create Deck")
-    tester().waitForViewWithAccessibilityLabel("Deck Name TextField")
-    tester().waitForViewWithAccessibilityLabel("Create")
-    tester().waitForViewWithAccessibilityLabel("Cancel")
+  func test03_add_one_new_deck_to_list() {
+    tap("New Deck")
+    should_see_the_create_button_enabled_only_when_deck_name_is_entered()
+    fill_in_deck_name()
+    tap("Create")
+    deck_form_should_disappear()
+    should_see_the_new_deck_added_into_the_list_successfully()
   }
   
 }

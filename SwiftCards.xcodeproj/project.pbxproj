@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E2B665B467B28E9FD111FD /* Pods_SwiftCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25818A7ADB68FBEF42EB26E1 /* Pods_SwiftCards.framework */; };
 		1DA4561E99615AC30BD24E21 /* Pods_SwiftCardsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBEF328DAB0886256F8B6C6 /* Pods_SwiftCardsUITests.framework */; };
 		281830233E8752BFDD1656BA /* Pods_SwiftCardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1975DBE98166AD3E4CA6A31F /* Pods_SwiftCardsTests.framework */; };
 		F3B9F4741CF1560B0011980B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9F4731CF1560B0011980B /* AppDelegate.swift */; };
@@ -19,6 +20,11 @@
 		F3B9F4A91CF165110011980B /* DecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9F4A81CF165110011980B /* DecksViewController.swift */; };
 		F3B9F4AB1CF16BB00011980B /* DeckFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9F4AA1CF16BB00011980B /* DeckFormViewController.swift */; };
 		F3B9F4AF1CF173640011980B /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9F4AE1CF173640011980B /* UIStoryboard+Extensions.swift */; };
+		F3B9F4B21CF1A5230011980B /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9F4B11CF1A5230011980B /* Deck.swift */; };
+		F3B9F4B61CF1B8C50011980B /* BaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9F4B51CF1B8C50011980B /* BaseUITests.swift */; };
+		F3B9F4BA1CF1C24D0011980B /* DeckIndexSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9F4B91CF1C24D0011980B /* DeckIndexSteps.swift */; };
+		F3B9F4BC1CF1C3430011980B /* CommonSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9F4BB1CF1C3430011980B /* CommonSteps.swift */; };
+		F3B9F4C01CF1C5C20011980B /* DecksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B9F4BF1CF1C5C20011980B /* DecksDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +46,13 @@
 
 /* Begin PBXFileReference section */
 		1975DBE98166AD3E4CA6A31F /* Pods_SwiftCardsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCardsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25818A7ADB68FBEF42EB26E1 /* Pods_SwiftCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BCF5F1A1430849A8FAE61C /* Pods-SwiftCardsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCardsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCardsUITests/Pods-SwiftCardsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		471D82014E8B446D57C925F4 /* Pods-SwiftCardsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCardsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCardsTests/Pods-SwiftCardsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4FBEF328DAB0886256F8B6C6 /* Pods_SwiftCardsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCardsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F066DD11334904D439B1015 /* Pods-SwiftCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCards/Pods-SwiftCards.release.xcconfig"; sourceTree = "<group>"; };
 		8FE43A1048BFCCEF0A0DCF64 /* Pods-SwiftCardsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCardsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCardsTests/Pods-SwiftCardsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0A0ECA14AA9364F10F5EE98 /* Pods-SwiftCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCards/Pods-SwiftCards.debug.xcconfig"; sourceTree = "<group>"; };
 		F3B9F4701CF1560B0011980B /* SwiftCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B9F4731CF1560B0011980B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B9F4781CF1560B0011980B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +70,11 @@
 		F3B9F4A81CF165110011980B /* DecksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecksViewController.swift; sourceTree = "<group>"; };
 		F3B9F4AA1CF16BB00011980B /* DeckFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckFormViewController.swift; sourceTree = "<group>"; };
 		F3B9F4AE1CF173640011980B /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		F3B9F4B11CF1A5230011980B /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		F3B9F4B51CF1B8C50011980B /* BaseUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITests.swift; sourceTree = "<group>"; };
+		F3B9F4B91CF1C24D0011980B /* DeckIndexSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckIndexSteps.swift; sourceTree = "<group>"; };
+		F3B9F4BB1CF1C3430011980B /* CommonSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonSteps.swift; sourceTree = "<group>"; };
+		F3B9F4BF1CF1C5C20011980B /* DecksDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecksDataSource.swift; sourceTree = "<group>"; };
 		FE1EE09C22B94ED9F756687D /* Pods-SwiftCardsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCardsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCardsUITests/Pods-SwiftCardsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E2B665B467B28E9FD111FD /* Pods_SwiftCards.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +113,8 @@
 				471D82014E8B446D57C925F4 /* Pods-SwiftCardsTests.release.xcconfig */,
 				FE1EE09C22B94ED9F756687D /* Pods-SwiftCardsUITests.debug.xcconfig */,
 				27BCF5F1A1430849A8FAE61C /* Pods-SwiftCardsUITests.release.xcconfig */,
+				A0A0ECA14AA9364F10F5EE98 /* Pods-SwiftCards.debug.xcconfig */,
+				5F066DD11334904D439B1015 /* Pods-SwiftCards.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -107,6 +124,7 @@
 			children = (
 				1975DBE98166AD3E4CA6A31F /* Pods_SwiftCardsTests.framework */,
 				4FBEF328DAB0886256F8B6C6 /* Pods_SwiftCardsUITests.framework */,
+				25818A7ADB68FBEF42EB26E1 /* Pods_SwiftCards.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +154,8 @@
 		F3B9F4721CF1560B0011980B /* SwiftCards */ = {
 			isa = PBXGroup;
 			children = (
+				F3B9F4BE1CF1C5AD0011980B /* DataSources */,
+				F3B9F4B01CF1A51A0011980B /* Models */,
 				F3B9F4AD1CF173470011980B /* Extensions */,
 				F3B9F4731CF1560B0011980B /* AppDelegate.swift */,
 				F3B9F4771CF1560B0011980B /* Main.storyboard */,
@@ -164,6 +184,9 @@
 				F3B9F4A11CF1593D0011980B /* KIF+Extensions.swift */,
 				F3B9F4A31CF1596A0011980B /* SwiftCardsUITests-Bridging-Header.h */,
 				F3B9F4A61CF161F00011980B /* DeckIndexTests.swift */,
+				F3B9F4B91CF1C24D0011980B /* DeckIndexSteps.swift */,
+				F3B9F4BB1CF1C3430011980B /* CommonSteps.swift */,
+				F3B9F4B51CF1B8C50011980B /* BaseUITests.swift */,
 			);
 			path = SwiftCardsUITests;
 			sourceTree = "<group>";
@@ -176,6 +199,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F3B9F4B01CF1A51A0011980B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3B9F4B11CF1A5230011980B /* Deck.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3B9F4BE1CF1C5AD0011980B /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				F3B9F4BF1CF1C5C20011980B /* DecksDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3B9F48D1CF1560B0011980B /* Build configuration list for PBXNativeTarget "SwiftCards" */;
 			buildPhases = (
+				D3D4EB855F927D33EC7CC7ED /* Check Pods Manifest.lock */,
 				F3B9F46C1CF1560A0011980B /* Sources */,
 				F3B9F46D1CF1560A0011980B /* Frameworks */,
 				F3B9F46E1CF1560A0011980B /* Resources */,
+				4425A52E57D219EFEECA0DA2 /* Embed Pods Frameworks */,
+				6620406EFFD7F97CCCA17EAE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,6 +366,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCardsTests/Pods-SwiftCardsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4425A52E57D219EFEECA0DA2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCards/Pods-SwiftCards-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6620406EFFD7F97CCCA17EAE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCards/Pods-SwiftCards-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7CC062DC12D92345E1BB0800 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +456,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCardsUITests/Pods-SwiftCardsUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D3D4EB855F927D33EC7CC7ED /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		F72EBCD3E62088F8F27804DB /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,8 +495,10 @@
 			files = (
 				F3B9F4741CF1560B0011980B /* AppDelegate.swift in Sources */,
 				F3B9F4A91CF165110011980B /* DecksViewController.swift in Sources */,
+				F3B9F4B21CF1A5230011980B /* Deck.swift in Sources */,
 				F3B9F4AF1CF173640011980B /* UIStoryboard+Extensions.swift in Sources */,
 				F3B9F4AB1CF16BB00011980B /* DeckFormViewController.swift in Sources */,
+				F3B9F4C01CF1C5C20011980B /* DecksDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +515,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3B9F4A71CF161F00011980B /* DeckIndexTests.swift in Sources */,
+				F3B9F4BA1CF1C24D0011980B /* DeckIndexSteps.swift in Sources */,
 				F3B9F4A21CF1593D0011980B /* KIF+Extensions.swift in Sources */,
+				F3B9F4BC1CF1C3430011980B /* CommonSteps.swift in Sources */,
+				F3B9F4B61CF1B8C50011980B /* BaseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +642,7 @@
 		};
 		F3B9F48E1CF1560B0011980B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0A0ECA14AA9364F10F5EE98 /* Pods-SwiftCards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftCards/Info.plist;
@@ -561,6 +654,7 @@
 		};
 		F3B9F48F1CF1560B0011980B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F066DD11334904D439B1015 /* Pods-SwiftCards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftCards/Info.plist;

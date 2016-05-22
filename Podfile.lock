@@ -4,15 +4,23 @@ PODS:
   - KIF/Core (3.4.2)
   - Nimble (4.0.1)
   - Quick (0.9.2)
+  - Realm (0.103.1):
+    - Realm/Headers (= 0.103.1)
+  - Realm/Headers (0.103.1)
+  - RealmSwift (0.103.1):
+    - Realm (= 0.103.1)
 
 DEPENDENCIES:
   - KIF (~> 3.0)
   - Nimble
   - Quick
+  - RealmSwift
 
 SPEC CHECKSUMS:
   KIF: b518c9831453abea5afdbbde3908ec47832d6d56
   Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+  Realm: 9ed57109332e95bdc48a7caedff80b70c51d5ef4
+  RealmSwift: 56629adb4acd2dc33eb2c8199fe856585dfd3ba3
 
 COCOAPODS: 0.39.0
