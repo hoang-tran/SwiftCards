@@ -7,24 +7,13 @@
 //
 
 import KIF
+import Realm
 import RealmSwift
 
 class BaseUITests: KIFTestCase {
-  
-  override func beforeEach() {
-    super.beforeEach()
-    cleanDatabase()
+
+  override func beforeAll() {
+    super.beforeAll()
   }
 
-}
-
-extension BaseUITests {
-
-  func cleanDatabase() {
-    let realm = try! Realm()
-    try! realm.write {
-      realm.deleteAll()
-    }
-  }
-  
 }
