@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  SwiftCards
-//
-//  Created by Hoang Tran on 5/22/16.
-//  Copyright © 2016 Hoang Tran. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -17,6 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     setupDatabaseForTest()
     return true
   }
-  
+
 }
 
