@@ -19,6 +19,7 @@ class DecksDataSource: NSObject {
       tableView.registerNib(UINib(nibName: "DeckCell", bundle: nil), forCellReuseIdentifier: DeckCellReuseIdentifier)
     }
   }
+  var deckCellDelegate: DeckCellDelegate?
 
   lazy var decks: Results<Deck> = {
     let realm = try! Realm()
@@ -47,6 +48,7 @@ extension DecksDataSource: UITableViewDataSource {
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(DeckCellReuseIdentifier, forIndexPath: indexPath) as! DeckCell
+    cell.delegate = deckCellDelegate
     cell.deck = decks[indexPath.row]
     return cell
   }
